@@ -1,4 +1,4 @@
 # Platformer_AI
-A simple platforming game with graphics that has a bot that beats levels
+A simple platforming game which I intend to eventually add graphics and an AI that can beat the levels in it.
 
 Built in C++ with SFML libraries.
