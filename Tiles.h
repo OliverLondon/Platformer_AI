@@ -13,5 +13,8 @@ public:
 	void Slab(sf::ConvexShape *, int x, int y);
 	
 	void ccc(sf::CircleShape *, int x);
+
+	void convex_shape(sf::ConvexShape &, int top, int left, int right, int bottom);
+	void flag(sf::ConvexShape &q, int top, int left, int right, int bottom);
 };
 
