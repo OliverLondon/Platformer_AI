@@ -60,3 +60,26 @@ void Tiles::ccc(sf::CircleShape *s, int x) {
 	(*s).setRadius(x);
 	(*s).setFillColor(sf::Color::Blue);
 }
+
+void Tiles::convex_shape(sf::ConvexShape &q, int top, int left, int right, int bottom) {
+	/*
+	top = top of row x
+	left = left of column x
+	right = right of column x
+	bottom = bottom of row x
+	*/
+	q.setPointCount(4);
+	q.setPoint(0, sf::Vector2f(0.f + left * 32, 0.f + top * 32));//top left
+	q.setPoint(1, sf::Vector2f(32.f + right * 32, 0.f + top * 32));//top right
+	q.setPoint(2, sf::Vector2f(32.f + right * 32, 32.f + bottom * 32));//bottom right
+	q.setPoint(3, sf::Vector2f(0.f + left * 32, 32.f + bottom * 32));//bottom left
+}
+
+void Tiles::flag(sf::ConvexShape &q, int top, int left, int right, int bottom) {
+	q.setPointCount(4);
+	q.setPoint(0, sf::Vector2f(10.f + left * 32, 0.f + top * 32));//top left
+	q.setPoint(1, sf::Vector2f(20.f + right * 32, 0.f + top * 32));//top right
+	q.setPoint(2, sf::Vector2f(20.f + right * 32, 32.f + bottom * 32));//bottom right
+	q.setPoint(3, sf::Vector2f(10.f + left * 32, 32.f + bottom * 32));//bottom left
+	q.setFillColor(sf::Color(255, 255, 51));
+}
